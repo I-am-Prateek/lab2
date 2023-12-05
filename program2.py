@@ -16,9 +16,10 @@ avg_daily_percentage_dec=decrease_percentage/100
 
 all_calories=daily_cal_intake
 for i in range(1,no_of_days+1):
-        calories*=(1-avg_daily_percentage_dec/100)
+        all_calories=(all_calories-(all_calories*(decrease_percentage/100)))
         if(all_calories<1200):
             print("You need to stabilize the diet")
+            break
         else:
             print("The decrease in calories per day is:",all_calories)
 
